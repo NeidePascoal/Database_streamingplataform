@@ -1,0 +1,6 @@
+USE [MusicStreaming1]
+ALTER TABLE [dbo].[MusicHistoric] REBUILD PARTITION = ALL
+WITH
+(DATA_COMPRESSION = NONE
+)
+
