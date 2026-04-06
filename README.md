@@ -1,43 +1,123 @@
-# StreamingPLATFORM
+### 🎧 StreamingPLATFORM – Music Streaming Database System
 
-## Project Description
-The StreamingPLATFORM project is a music streaming platform created in Microsoft SQL Server, managed through SQL Server Management Studio (SSMS). It enables efficient management of user, artist, album, track, and playback statistics data.
+📌 Project Overview
+StreamingPLATFORM is a relational database project designed to simulate a music streaming service. Built using Microsoft SQL Server and managed via SQL Server Management Studio, the system supports efficient storage, management, and analysis of music streaming data.
+This project demonstrates strong skills in database design, T-SQL development, and data modeling, including the implementation of advanced database features such as stored procedures, triggers, and performance optimization techniques.
 
-## Technologies Used
-- Microsoft SQL Server
-- SQL Server Management Studio (SSMS)
-- T-SQL for data creation and manipulation
-- Backup file (.bak) for database restoration
+🎯 Objectives
+Design a scalable and normalized relational database
+Simulate real-world streaming platform operations
+Implement data integrity and automation using SQL features
+Enable analytical queries for user behavior and platform performance
 
-## Database Structure
-The database includes tables for:
-- Users
-- Artists
-- Albums
-- Tracks
-- Playlists
-- Playback logs
+🛠️ Technologies Used
+Microsoft SQL Server
+SQL Server Management Studio
+T-SQL (Transact-SQL) for:
+Data Definition (DDL)
+Data Manipulation (DML)
+Stored Procedures
+Triggers
 
-## Restore Database from Backup (.bak)
-To restore the database in SSMS:
-1. Open SQL Server Management Studio.
-2. Connect to your SQL Server instance.
-3. Right-click on "Databases" and select "Restore Database".
-4. On the "General" tab, choose "Device" and select the `.bak` file.
-5. Configure the database name and other restore options.
-6. Click "OK" to start the process.
+The database is structured to reflect a real streaming platform and includes:
+Core Entities:
+Users – platform users and profiles
+Artists / Singers – music creators
+Albums – collections of tracks
+Tracks – individual songs
+Playlists – user-created collections
+Playback Logs – listening history and activity
 
-## Usage
-After restoring the database, run T-SQL scripts to:
-- Insert and update data
-- Perform custom queries and reports
-- Analyze system usage
+🧩 Data Modeling
+📌 Conceptual Model
+Defines high-level entities and relationships between them.
 
-## How to Contribute
-Contributions are welcome! Please send pull requests for:
-- Bug fixes
-- New features
-- Improvements in database structure or scripts
+📌 Logical Model
+Includes:
+Primary and foreign keys
+Relationships (1:N, N:M)
+Normalization structure
+📎 Files:
+StreamingMusic_ConceptualModel.png
+StreamingMusic_LogicModel.png
+⚙️ Key Features Implemented
 
+🔹 Stored Procedures
+Defined in Stored_Procedures.sql to:
+Automate data operations
+Improve performance
+Encapsulate business logic
 
+🔹 Triggers
+Defined in Triggers.sql to:
+Enforce data integrity
+Automate actions on insert/update/delete
 
+🔹 Temporary Tables
+Used in Temporary_Table.sql for:
+Intermediate data processing
+Query optimization
+
+🔹 In-Memory Tables
+Implemented in Singers_InMemoryTable.sql to:
+Improve performance for high-speed operations
+
+🔹 Filegroups & Performance
+DB_StreamingMusic_filegroup.zip
+Data partitioning and storage optimization
+
+🔹 Data Compression & Maintenance
+Compression_Type_MusicHistoric.sql
+DataFiles_TempDB_DBCC.sql
+
+Used for:
+Storage optimization
+Database maintenance and consistency checks
+🧪 How to Run the Project
+✅ 1. Prerequisites
+Install:
+Microsoft SQL Server
+SQL Server Management Studio
+✅ 2. Create Database
+Open SSMS
+Connect to your SQL Server instance
+Create a new database:
+CREATE DATABASE StreamingPLATFORM;
+GO
+✅ 3. Execute SQL Scripts
+Run the scripts in the following order:
+Create_User.sql
+Table creation scripts (if included)
+Temporary_Table.sql
+Singers_InMemoryTable.sql
+Stored_Procedures.sql
+Triggers.sql
+Performance & maintenance scripts
+✅ 4. Restore Database (Optional)
+If using backup:
+Right-click Databases → Restore Database
+Select .bak file
+Configure settings
+Click OK
+
+📊 Example Use Cases
+Analyze user listening behavior
+Track most popular songs and artists
+Generate reports on platform usage
+Optimize database performance
+
+💡 Key Learnings
+Relational database design and normalization
+Advanced T-SQL programming
+Query optimization techniques
+Real-world data modeling
+Performance tuning in SQL Server
+🚀 Future Improvements
+Integration with Power BI for dashboards
+API layer for application integration
+Migration to cloud (Azure SQL Database)
+Real-time streaming data simulation
+
+ ##### Neide Varela Pascoal
+ 
+Data Analyst
